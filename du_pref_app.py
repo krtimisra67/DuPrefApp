@@ -93,4 +93,4 @@ if submit_button:
 
 # ---------------------- FOOTER ----------------------
 st.markdown("---")
-st.caption("Made with ❤️ by **Kriti ** | DU Preference Maker 2025 – aligned with CSAS(UG) 2025 guidelines")
+st.caption("Made with ❤️ by **Kriti Sapna Anushka** | DU Preference Maker 2025 – aligned with CSAS(UG) 2025 guidelines")

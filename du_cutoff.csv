@@ -220,9 +220,9 @@ S.NO.,COLLEGE NAME,PROGRAM NAME,UR,OBC,SC,ST,EWS,PwBD,
 219,Delhi College of Arts and Commerce,B.A Program (Accounting and Finance + Computer Applications),774.3738156,625.1529147,602.7047098,465.8780947,620.2978811,,
 220,Delhi School of Journalism,Five Year Integrated Program in Journalism,499.6773329,401.9120313,366.8347281,343.0157826,413.6810834,209.9153759,
 221,Department of Germanic and Romance Studies,B.A. (Hons.) French,673.9078415,512.5134682,503.3320785,466.7593395,547.838389,,
-222,Romance Studies,B.A. (Hons.) German,664.6883602,515.7122264,585.4056046,357.1941653,519.1307932,371.6066027,
-223,Romance Studies,B.A. (Hons.) Italian,617.8258379,431.1950127,453.9693996,235.2765426,455.4667108,,
-224,Romance Studies,B.A. (Hons.) Spanish,639.550497,479.2553044,474.1192886,347.4008987,495.5337448,539.2836336,
+222,Department of Germanic and Romance Studies ,B.A. (Hons.) German,664.6883602,515.7122264,585.4056046,357.1941653,519.1307932,371.6066027,
+223,Department of Germanic and Romance Studies ,B.A. (Hons.) Italian,617.8258379,431.1950127,453.9693996,235.2765426,455.4667108,,
+224,Department of Germanic and Romance Studies ,B.A. (Hons.) Spanish,639.550497,479.2553044,474.1192886,347.4008987,495.5337448,539.2836336,
 225,Department of Slavonic and Finno Ugrian Studies,B.A. (Hons.) Russian,575.2737819,398.0831137,388.3778915,117.3831251,376.5339318,192.535204,
 226,Deshbandhu College,B.A. (Hons.) Economics,722.9098625,472.6567588,359.8521533,285.3248315,504.3063682,,
 227,Deshbandhu College,B.A. (Hons.) English,675.0541946,533.3191587,476.6171954,471.0529787,500.3192155,,
@@ -1365,16 +1365,12 @@ College",B.A Program (Economics + History),682.506651,,,,,,
 1363,Sri Venketeswara College,B.Sc (Hons.) Mathematics,730.777393,571.4718781,471.6655852,333.7104214,598.8619152,,
 1364,Sri Venketeswara College,B.Sc (Hons.) Statistics,806.7343972,615.6383154,526.9928901,404.4966577,663.8214854,,
 1365,Sri Venketeswara College,B.A Program (History + Political Science),832.2440879,777.9901426,722.9179154,721.6027253,773.9781625,628.6769944,
-1366,Sri Venketeswara College,"B.A Program (Tamil + Political 
-Science/History)",460.778829,399.0130666,165.6803383,,324.8431528,,
+1366,Sri Venketeswara College,"B.A Program (Tamil + Political Science/History)",460.778829,399.0130666,165.6803383,,324.8431528,,
 1367,Sri Venketeswara College,B.A Program (Hindi + History/Sociology),780.2297084,698.2529912,663.508465,563.5128957,692.3735542,470.2376397,
 1368,Sri Venketeswara College,B.A Program (Sanskrit +Sociology/History),605.8628816,492.6849498,309.2225802,356.5973641,477.9022351,,
-1369,Sri Venketeswara College,"B.A Program (English + 
-Sociology/Economics) ",823.7006746,734.8782741,660.9710826,665.082258,770.2148169,671.8615812,
-1370,Sri Venketeswara College,"B.A Program (Economics + 
-Mathematics/Statistics/Sociology) ",832.1535955,698.7379706,669.6434187,626.9868736,714.7832633,,
-1371,Sri Venketeswara College,"B.A Program (Telegu + Political 
-Science/History) ",545.3358616,436.5101208,240.6739756,347.123438,504.5920051,,
+1369,Sri Venketeswara College,"B.A Program (English + Sociology/Economics) ",823.7006746,734.8782741,660.9710826,665.082258,770.2148169,671.8615812,
+1370,Sri Venketeswara College,"B.A Program (Economics + Mathematics/Statistics/Sociology) ",832.1535955,698.7379706,669.6434187,626.9868736,714.7832633,,
+1371,Sri Venketeswara College,"B.A Program (Telegu + Political Science/History) ",545.3358616,436.5101208,240.6739756,347.123438,504.5920051,,
 1372,St. Stephen's College,B.A. (Hons.) English,926.9288845,,819.7463565,852.5191587,,739.7538259,
 1373,St. Stephen's College,B.A. (Hons.) Economics,904.6216142,,726.2703661,741.5417062,,637.9490296,
 1374,St. Stephen's College,B.A. (Hons.) History,918.7180959,,844.4037083,890.5619824,,854.4857911,
@@ -1412,9 +1408,7 @@ Science/Philosophy)) ",912.5744652,,826.9340686,,,839.1807657,
 1401,Swami Shardhanand College,B.A Program (History + Political Science),568.8613796,428.9260752,394.8456192,336.0221645,346.5818099,,
 1402,Swami Shardhanand College,B.A Program (Economics + History),554.2606704,406.5746711,348.5804949,243.5578489,351.851438,,
 1403,Swami Shardhanand College,B.A Program (English + History),605.0395932,469.1137624,449.7244664,,413.7741251,,
-1404,Swami Shardhanand College,"B.A Program (Office Management & 
-Secretarial Practice (OMSP) + Political 
-Science) ",583.232057,424.6168215,471.8497367,327.3331232,409.4734889,,
+1404,Swami Shardhanand College,"B.A Program (Office Management & Secretarial Practice (OMSP) + Political Science) ",583.232057,424.6168215,471.8497367,327.3331232,409.4734889,,
 1405,Swami Shardhanand College,B.A Program (History + OMSP),551.514347,412.3375575,365.2571996,186.9620979,362.445224,,
 1406,Swami Shardhanand College,B.A Program (Mathematics + OMSP),549.3452979,346.4170133,217.7951371,,298.2138444,,
 1407,Swami Shardhanand College,B.A Program (Sanskrit + OMSP),263.02469,,,,,,
@@ -1437,10 +1431,8 @@ Science) ",583.232057,424.6168215,471.8497367,327.3331232,409.4734889,,
 1424,Vivekananda College (W),B.A Program (English + Food Technology),656.7453679,552.3882655,562.2636772,485.2107128,571.5651579,,
 1425,Vivekananda College (W),B.A Program (French + Economics),608.9877816,294.0245206,357.3492319,,441.7191215,,
 1426,Vivekananda College (W),B.A Program (Sanskrit + History),198.8526291,,,,,,
-1427,Vivekananda College (W),"B.A Program (Computer Applications + 
-Economics) ",630.8328169,378.6544649,324.7876821,,487.2060978,,
-1428,Vivekananda College (W),"B.A Program (Computer Applications + 
-Mathematics)",576.1725357,414.6350421,404.1825883,144.3603369,412.5891887,,
+1427,Vivekananda College (W),"B.A Program (Computer Applications + Economics) ",630.8328169,378.6544649,324.7876821,,487.2060978,,
+1428,Vivekananda College (W),"B.A Program (Computer Applications + Mathematics)",576.1725357,414.6350421,404.1825883,144.3603369,412.5891887,,
 1429,Vivekananda College (W),Political Science),553.1807859,364.2533716,243.7905548,,275.4022776,,
 1430,Vivekananda College (W),B.A Program (Economics + Mathematics),640.9049499,380.9650215,206.5872076,,331.6190239,,
 1431,Vivekananda College (W),B.A Program (Economics + Political Science),647.6882076,450.5901627,414.7427183,382.3039727,475.70292,,

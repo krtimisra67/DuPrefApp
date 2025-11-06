@@ -1,19 +1,26 @@
 import streamlit as st
 import pandas as pd
 
-# ---------------------- PAGE CONFIG ----------------------
+# ---------------------- LOGIN CHECK ----------------------
 st.set_page_config(page_title="🎓 DU Preference Maker", layout="wide")
 
+if "logged_in" not in st.session_state or not st.session_state["logged_in"]:
+    st.warning("⚠️ Please log in first to access the Preference Maker.")
+    st.info("🔐 Redirecting you to the login page...")
+    st.stop()
+
+# ---------------------- HEADER ----------------------
 st.title("🎓 DU Preference Maker")
-st.markdown("""
-#### Find your eligible colleges based on July 2025 CUET cutoffs and CSAS(UG) 2025 rules.
+st.markdown(f"""
+#### Welcome, **{st.session_state['username']}** 👋  
+Find your eligible colleges based on July 2025 CUET cutoffs and CSAS(UG) 2025 rules.
 """)
 
 # ---------------------- LOAD DATA ----------------------
 @st.cache_data
 def load_data():
     df = pd.read_csv("du_cutoff.csv")  # Replace with your CSV path
-    df.columns = [c.strip().upper() for c in df.columns]  # Clean column names
+    df.columns = [c.strip().upper() for c in df.columns]
     df["PROGRAM NAME"] = df["PROGRAM NAME"].astype(str)
     for cat in ["UR", "OBC", "SC", "ST", "EWS", "PwBD"]:
         if cat in df.columns:
@@ -35,16 +42,16 @@ girls_colleges = [
 ]
 
 # ---------------------- SIDEBAR FORM ----------------------
-with st.sidebar.form("user_input_form"):
+with st.sidebar:
     st.header("🧮 Enter Your Details")
     marks = st.number_input("🎯 CUET Score", min_value=0.0, max_value=1000.0, value=600.0, step=0.5)
     category = st.selectbox("🏷️ Category", ["UR", "OBC", "SC", "ST", "EWS", "PwBD"])
-    program = st.selectbox("📚 Program", sorted([p for p in df["PROGRAM NAME"].unique() if str(p).strip()]))
+    program = st.selectbox("📚 Program", sorted(df["PROGRAM NAME"].unique()))
     girls_only = st.checkbox("🎀 Show only Girls’ Colleges", value=False)
-    submit_button = st.form_submit_button("🔍 Generate Preference List")
+    submit_button = st.button("🔍 Generate Preference List")
 
-st.sidebar.markdown("---")
-st.sidebar.caption("💡 Only colleges you are eligible for will appear.")
+    st.markdown("---")
+    st.caption("💡 Only colleges you are eligible for will appear below.")
 
 # ---------------------- MAIN LOGIC ----------------------
 if submit_button:
@@ -63,12 +70,11 @@ if submit_button:
             if eligible_df.empty:
                 st.warning("⚠️ No colleges found where you meet the cutoff. Try adjusting your score or category.")
             else:
-                # Calculate Marks Above Cutoff
                 eligible_df["Marks Above Cutoff"] = marks - eligible_df[category]
                 eligible_df = eligible_df.sort_values(by="Marks Above Cutoff", ascending=False)
                 eligible_df.insert(0, "Rank", range(1, len(eligible_df) + 1))
 
-                st.success(f"🎯 Colleges where you are eligible for **{program} ({category})**"
+                st.success(f"🎯 Eligible Colleges for **{program} ({category})**"
                            + (" (Girls’ Colleges only)" if girls_only else ""))
 
                 st.dataframe(
@@ -77,9 +83,8 @@ if submit_button:
                     hide_index=True
                 )
 
-                st.info("💡 'Marks Above Cutoff' shows how many marks your score is above the college cutoff. Higher = safer choice!")
+                st.info("💡 'Marks Above Cutoff' shows how many marks your score exceeds the cutoff by.")
 
-                # Download button
                 csv = eligible_df.to_csv(index=False).encode("utf-8")
                 st.download_button(
                     label="📥 Download Preference List (CSV)",
@@ -89,8 +94,16 @@ if submit_button:
                 )
 
     except Exception as e:
-        st.error(f"⚠️ An unexpected error occurred: {e}")
+        st.error(f"⚠️ Unexpected error: {e}")
+
+# ---------------------- LOGOUT BUTTON ----------------------
+st.sidebar.markdown("---")
+if st.sidebar.button("🚪 Logout"):
+    st.session_state["logged_in"] = False
+    st.session_state["username"] = ""
+    st.success("🔒 Logged out successfully!")
+    st.switch_page("pages/login_page.py")
 
 # ---------------------- FOOTER ----------------------
 st.markdown("---")
-st.caption("Made with ❤️ by **Kriti Sapna Anushka** | DU Preference Maker 2025 – aligned with CSAS(UG) 2025 guidelines")
+st.caption("Made with ❤️ by **Kriti, Sapna & Anushka** | DU Preference Maker 2025 – aligned with CSAS(UG) 2025 guidelines")

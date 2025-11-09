@@ -1,5 +1,6 @@
 streamlit
-python-dotenv
 pandas
+numpy
+matplotlib
+python-dotenv
 google-generativeai
-openai
